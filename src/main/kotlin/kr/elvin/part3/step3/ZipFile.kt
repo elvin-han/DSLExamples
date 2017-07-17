@@ -18,10 +18,11 @@ class ZipFile(file: File): BinaryFile(file) {
 
         msDosDateTime() .. "lastModified"
 
-        println(+"lastModified")
+        println(lastModified)
+//        println(+"lastModified")
     }
 
-    val lastModified: LocalDateTime by valueMap
+    val lastModified: String by valueMap
 
     fun msDosDateTime(): String {
         val timeElement = buffer.short
